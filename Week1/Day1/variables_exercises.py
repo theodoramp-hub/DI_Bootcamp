@@ -8,3 +8,7 @@ print("Hello, {}! You are {} years old and live in {}.".format(name, age, city))
 #Exercise2
 age = input ("What is your age: ")
 print(f"You will turn 100 years in {100-int(age)} years")
+
+#Exercise3
+age = input("How old are you? ")
+print(f"You are {age} years old")
