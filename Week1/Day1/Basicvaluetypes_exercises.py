@@ -39,3 +39,4 @@ print (x < y and y > z)
 print (word1 != word2)
 print (bool(z))
 print (bool (word1))
+
