@@ -15,7 +15,7 @@ for char in user_string:
     built += char
     print(built)
 
-chars=list(user_string)
+chars = list(user_string)
 random.shuffle(chars)
 jumbled = "".join(chars)
 print(jumbled)
