@@ -79,4 +79,52 @@ if anyfruit in fruitslist:
     print("You chose one of your favorite fruits! Enjoy!")
 else:
     print("You chose a new fruit. I hope you enjoy it!")
+
+
+#Exercise 8: Pizza Toppings
+
+toppings = []
+while True:
+    topping = input('Enter your pizza toppings one by one. When finish type quit: ')
+    if topping.lower() == 'quit':
+        break
+    else:
+        toppings.append(topping)
+        print(f"Adding {topping} to your pizza.")
+
+print(f'You choose: {','.join(toppings)}')
+cost = (10 + len(toppings)*2.50)
+print(cost)
+
         
+#Exercise 9: Cinemax Tickets
+
+total = 0
+
+while True:
+    answer = input('Enter your age or done if finish: ')
+    if answer.lower() == 'done':
+        break
+    age = int(answer)
+    if age < 3:
+        total += 0
+    elif age <= 12:
+        total += 10
+    else:
+        total += 15
+
+print(f'Total cost: ${total}')
+
+#Bonus
+
+Attendees = []
+
+while True:
+    answer = input('Enter your age or done if finish: ')
+    if answer.lower() == 'done':
+        break
+    age = int(answer)
+    if 16 <= age <= 21:
+        Attendees.append(answer)
+  
+print(f"Final List: {','.join(Attendees)}")
