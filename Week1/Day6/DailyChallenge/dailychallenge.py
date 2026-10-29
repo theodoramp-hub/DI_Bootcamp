@@ -1,4 +1,4 @@
-git #Challenge 1: Letter Index Dictionary
+#Challenge 1: Letter Index Dictionary
 #Create a dictionary that stores the indices (number of the position) of each letter in a word provided by the user(input()).
 
 #Ask the user to enter a word.
