@@ -1,114 +1,114 @@
-# #Exercise 1: Converting Lists into Dictionaries
+#Exercise 1: Converting Lists into Dictionaries
 
-# keys = ['Ten', 'Twenty', 'Thirty']
-# values = [10, 20, 30]
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
 
-# result =dict(zip(keys, values))
+result =dict(zip(keys, values))
 
-# print(result)
-
-
-# #Exercise 2: Cinemax #2
+print(result)
 
 
-# family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
-
-# total_cost = 0
-# for name, age in family.items():
-#     if age < 3:
-#         price = 0
-#     elif age <= 12:
-#         price = 10
-#     else:
-#         price = 15
-#     print(f"{name.capitalize()} pays ${price}")
-#     total_cost += price
-
-# print(f"Total cost is ${total_cost}")
+#Exercise 2: Cinemax #2
 
 
-# #Exercise 2: Cinemax #2 - BONUS
+family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 
-# family2 = {}
-# while True:
-#     name = input("Write name or 'done' if finish: ")
-#     if name.lower() == 'done':
-#         break
-#     age = int(input(f"Write age for {name}: "))
-#     family2[name] = age
+total_cost = 0
+for name, age in family.items():
+    if age < 3:
+        price = 0
+    elif age <= 12:
+        price = 10
+    else:
+        price = 15
+    print(f"{name.capitalize()} pays ${price}")
+    total_cost += price
 
-# total_cost2 = 0
-# for name, age in family2.items():
-#         if age < 3:
-#             price = 0
-#         elif age <= 12:
-#             price = 10
-#         else:
-#             price = 15
-#         print(f"{name.capitalize()} pays ${price}")
-#         total_cost2 += price
-
-# print(f"Total cost is ${total_cost2}")
+print(f"Total cost is ${total_cost}")
 
 
-# #Exercise 3: Zara
+#Exercise 2: Cinemax #2 - BONUS
 
-# #Create a dictionary called brand with the provided data.
-# brand = {
-#     'name': 'Zara',      
-#     'creation_date': 1975,
-#     'creator_name': 'Amancio Ortega Gaona',
-#     'type_of_clothes': ['men', 'women', 'children', 'home'],
-#     'international_competitors': ['Gap', 'H&M', 'Benetton'],
-#     'number_stores': 7000,
-#     'major_color': {
-#         'France': 'blue', 
-#         'Spain': 'red', 
-#         'US': ['pink', 'green']
-#     }
-# }
-# print(brand)
+family2 = {}
+while True:
+    name = input("Write name or 'done' if finish: ")
+    if name.lower() == 'done':
+        break
+    age = int(input(f"Write age for {name}: "))
+    family2[name] = age
 
-# #Change the value of number_stores to 2.
-# brand['number_stores'] = 2
-# print(brand)
+total_cost2 = 0
+for name, age in family2.items():
+        if age < 3:
+            price = 0
+        elif age <= 12:
+            price = 10
+        else:
+            price = 15
+        print(f"{name.capitalize()} pays ${price}")
+        total_cost2 += price
 
-# #Print a sentence describing Zara’s clients using the type_of_clothes key.
-# print('Zara serves clients interested in:', ', '.join(brand['type_of_clothes']))
+print(f"Total cost is ${total_cost2}")
 
-# #Add a new key country_creation with the value Spain.
-# brand['country_creation'] = 'Spain'
-# print(brand)
 
-# #Check if international_competitors exists and, if so, add “Desigual” to the list.
-# if 'international_competitors' in brand:
-#     brand['international_competitors'].append('Desigual')
-# print(brand)
+#Exercise 3: Zara
 
-# #Delete the creation_date key.
-# del brand['creation_date']
-# print(brand)
+#Create a dictionary called brand with the provided data.
+brand = {
+    'name': 'Zara',      
+    'creation_date': 1975,
+    'creator_name': 'Amancio Ortega Gaona',
+    'type_of_clothes': ['men', 'women', 'children', 'home'],
+    'international_competitors': ['Gap', 'H&M', 'Benetton'],
+    'number_stores': 7000,
+    'major_color': {
+        'France': 'blue', 
+        'Spain': 'red', 
+        'US': ['pink', 'green']
+    }
+}
+print(brand)
 
-# #Print the last item in international_competitors.
-# print(brand['international_competitors'][-1])
+#Change the value of number_stores to 2.
+brand['number_stores'] = 2
+print(brand)
 
-# #Print the major colors in the US.
-# print(brand['major_color']['US'])
+#Print a sentence describing Zara’s clients using the type_of_clothes key.
+print('Zara serves clients interested in:', ', '.join(brand['type_of_clothes']))
 
-# #Print the number of keys in the dictionary.
-# print(len(brand))
+#Add a new key country_creation with the value Spain.
+brand['country_creation'] = 'Spain'
+print(brand)
 
-# #Print all keys of the dictionary.
-# print(list(brand.keys()))
+#Check if international_competitors exists and, if so, add “Desigual” to the list.
+if 'international_competitors' in brand:
+    brand['international_competitors'].append('Desigual')
+print(brand)
 
-# #
-# more_on_zara = {     
-#     'creation_date': 1975,
-#     'number_stores': 7000,
-# }
+#Delete the creation_date key.
+del brand['creation_date']
+print(brand)
 
-# brand | more_on_zara
-# print(brand)
+#Print the last item in international_competitors.
+print(brand['international_competitors'][-1])
+
+#Print the major colors in the US.
+print(brand['major_color']['US'])
+
+#Print the number of keys in the dictionary.
+print(len(brand))
+
+#Print all keys of the dictionary.
+print(list(brand.keys()))
+
+#
+more_on_zara = {     
+    'creation_date': 1975,
+    'number_stores': 10000,
+}
+
+brand |= more_on_zara
+print(brand)
 
 
 #Exercise 4: Disney Characters
