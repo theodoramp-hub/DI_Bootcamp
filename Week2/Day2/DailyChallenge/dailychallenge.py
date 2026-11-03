@@ -13,19 +13,19 @@ $a
 
 #Step 2: Processing Columns
 
-line = MATRIX_STR.strip()split('\n')
-matrix = []
-for line in lines:
-    if line:                      # skip empty rows (truthy check!)
-        matrix.append(list(line))
-print(matrix)   
-for line in matrix:
-    print(line)  
+matrix_list = MATRIX_STR.strip().split('\n')    
 
-# Read column by column
+message = ''      
 
-all_chars = ""
-for col in range(0, 4):          # how many columns? (length of first row)
-    for row in range(len(matrix)):      # how many rows?
-        all_chars += matrix[row][col]
-print(all_chars)                      # check it!
+#print (matrix_list)
+#print(len(matrix_list[0]))
+
+for col in range(len(matrix_list[0])):
+    for row in matrix_list:
+        if col < len(row) and row[col].isalpha():
+            message += row[col]
+        else:
+            message += ' '
+  
+print(message.strip())    
+
