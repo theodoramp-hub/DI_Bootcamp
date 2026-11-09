@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div id="elem">
+        <div id="elem-content">My element</div>
+    </div>
+    <p class="my-p"><a href="https://google.com" target="_blank">Lorem ipsum</a></p>
+    <form action=""></form>
+        <input type="text">
+        <textarea name="" id=""></textarea>
+        <select name="" id=""></select>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        <button type="submit"></button>
+    <script>
+        // 1. Let's select h1 and change the background to red
+        const myh1 = document.querySelector('h1')
+        myh1.style.background = "red"
+        // 2. Let's select a in p and console.log the following: 0
+        let myP = document.querySelector("p a")
+        // 2.1. How many attributes it has
+        console.log(myP.getAttribute.length)
+        // 2.2 The value of href
+        console.log(myP.getAttribute ('href'))
+        // 2.3 The value of target
+        console.log(myP.getAttribute ('href'))
+        // 3. Let's select all divs
+        const myDivs = documnet. querySelectorAll("div")
+        // 3.1 For each div, console.log the value of the id attribute
+        for (const div of myDivs) {
+            console.log(div.getAttribute("id"))
+        }
+    </script>
+</body>
+</html>
