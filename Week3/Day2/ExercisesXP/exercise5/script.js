@@ -1,56 +1,27 @@
 
 // STEP 1 - Retrieve the div
-let myDiv = document.querySelector("#container");
+let myDiv = document.getElementById("container");
 console.log(myDiv);
 
-// STEP 2 - Retrieve both ul elements
-let myLists = document.querySelectorAll("ul");
+// STEP 2 - Change the attribute 
+myDiv.setAttribute ('id', 'socialNetworkNavigation');
 
-// STEP 3 - Change Pete to Richard
-myLists[0].children[1].textContent = "Richard";
+// STEP 3 - Retrieve both ul elements
+let myLists = document.querySelector("ul");
 
-// STEP 4 - Delete Sarah from the second ul
-myLists[1].children[1].remove();
+// STEP 4 - Create new li
+let newLi = document.createElement('li')
 
-// STEP 5 - Change the first li of each ul to your name
-for (let list of myLists) {
-    list.firstElementChild.textContent = "Theodora";
-}
+// STEP 5 - Create text note 
+let newText = document.createTextNode(“Logout” )
 
-// STEP 6 - Add student_list class to both ul elements
-for (let list of myLists) {
-    list.classList.add("student_list");
-}
+// STEP 6 - Append the text node to the newly created list node (<li>).
+newLi.appendChild('Logout');
 
-// STEP 7 - Add two classes to the first ul
-myLists[0].classList.add("university", "attendance");
+// STEP 7 - Finally, append this updated list node to the unordered list (<ul>), using the appendChild method.
+myLists.appendChild(newLi);
 
-// STEP 8 - Style the div
-myDiv.style.backgroundColor = "lightblue";
-myDiv.style.padding = "20px";
-
-// STEP 9 - Hide Dan
-myLists[1].lastElementChild.style.display = "none";
-
-// STEP 10 - Add a border to Richard
-myLists[0].children[1].style.border = "1px solid black";
-
-// STEP 11 - Change body font size
-document.body.style.fontSize = "20px";
-
-// BONUS
-if (myDiv.style.backgroundColor === "lightblue") {
-    let name1 = myLists[0].firstElementChild.textContent;
-    let name2 = myLists[1].firstElementChild.textContent;
-
-    alert("Hello " + name1 + " and " + name2);
-}
-
-
-
-
-
-
+// STEP 8 -Use the firstElementChild and the lastElementChild properties to retrieve the first and last <li> elements from their parent element (<ul>). Display the text of each link. (Hint: use the textContent property).
 
 
 
