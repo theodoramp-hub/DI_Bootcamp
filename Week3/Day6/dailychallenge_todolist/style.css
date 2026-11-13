@@ -1,0 +1,63 @@
+body {
+    background-color: #ff4b65;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+form {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listTasks {
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px 
+}
+
+#submit {
+    background-color: white;
+    color: #4285f4;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input {
+    border: none;
+}
+input::placeholder {
+    color: gray;
+    font-size: 16px;
+   
+}
+.listTasks button {
+    background-color: rgb(300, 20, 20);
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+    margin-left: 10 px;
+}
+
+.listTasks >div {
+    border-bottom: 1px solid lightblue;
+    padding: 8px 0;
+    margin-left: 10 px;
+}
+
