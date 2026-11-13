@@ -30,7 +30,9 @@ function addTask(event) {
         myX.type = "button";
         myTask.appendChild(myX);
 
-                const myCheckbox = document.createElement("input");
+        myX.addEventListener("click", deleteTask);
+
+        const myCheckbox = document.createElement("input");    
         myCheckbox.type = "checkbox";
         myTask.appendChild(myCheckbox);
 
@@ -69,4 +71,23 @@ function doneTask(event) {
     }   
 
 console.log(tasks);
+}
+
+function deleteTask(event) {
+
+    const myX = event.target;
+
+    const myTask = myX.parentElement;
+
+    const myId = Number(myTask.dataset.taskId);
+
+    const myIndex = tasks.findIndex(task => task.task_id === myId);
+
+    if (myIndex !== -1) {
+        tasks.splice(myIndex, 1);
+    }
+
+    myTask.remove();
+
+    console.log(tasks);
 }
