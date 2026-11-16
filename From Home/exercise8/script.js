@@ -1,10 +1,4 @@
-
-
-
-
-
-
-
+//Exercise 7
 
 (function (username) {
     const myNavbar = document.getElementById("navbar");
@@ -20,5 +14,5 @@
 
     myNavbar.appendChild(myName)
     myNavbar.appendChild(myImg)
-    
+
 })("John")
