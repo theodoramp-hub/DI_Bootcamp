@@ -1,35 +1,48 @@
-//Exercise 7
+// Exercise 7 - Part I
 
-function displayJuice () {
-    
-    const mySentense = document.createElement("p")
-
-    mySentense.textContent = "The client wants a " + size + " juice, containing " + ingredients,join(",")
-
-        document.body.appendChild(mySentense)
-    }
-    addIngredients("apple", "orange", "banana");
-}
-makeJuice("large");
-
-//Exercise 7 - Part II
-
-function makeJuice (size) {
-    let ingredients = []
+function makeJuice(size) {
 
     function addIngredients(ingredient1, ingredient2, ingredient3) {
-        ingredients.push(ingredient1, ingredient2, ingredient3)
+        return ingredient1 + ", " + ingredient2 + ", " + ingredient3;
     }
-        
-        const mySentense = document.createElement("p")
-        mySentense.textContent = "The client wants a " + size + " juice, containing " + ingredient1 + ", " + ingredient2 + ", " + ingredient3;c
 
-        document.body.appendChild(mySentense)
+    function displayJuice() {
+        const ingredients = addIngredients("apple", "orange", "banana");
+
+        const mySentence = document.createElement("p");
+
+        mySentence.textContent = "The client wants a " + size +
+            " juice, containing " + ingredients;
+
+        document.body.appendChild(mySentence);
     }
+
+    displayJuice();
+}
+
+makeJuice("large");
+
+function makeJuice(size) {
+
+    let ingredients = [];
+
+    function addIngredients(ingredient1, ingredient2, ingredient3) {
+        ingredients.push(ingredient1, ingredient2, ingredient3);
+    }
+
+    function displayJuice() {
+        const mySentence = document.createElement("p");
+
+        mySentence.textContent = "The client wants a " + size +
+            " juice, containing " + ingredients.join(", ");
+
+        document.body.appendChild(mySentence);
+    }
+
     addIngredients("apple", "orange", "banana");
     addIngredients("mango", "strawberry", "pineapple");
 
     displayJuice();
-
 }
+
 makeJuice("large");

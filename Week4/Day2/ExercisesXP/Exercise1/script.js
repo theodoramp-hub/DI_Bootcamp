@@ -30,18 +30,9 @@ funcThree()  // Shows 5
 // with const instead of let ? 
 
 
-const a = 0;
-function funcTwo() {
-    a = 5;
-}
-
-function funcThree() {
-    alert(`inside the funcThree function ${a}`);
-}
-
-funcThree()  // 0 as a is declared in global scope
-funcTwo()  // Will not change because const does not allow reassignment. 
-funcThree()  // error stops execution
+//funcThree()  // 0 as a is declared in global scope
+//funcTwo()  // Will not change because const does not allow reassignment. 
+//funcThree()  // error stops execution
 
 //#3
 function funcFour() {
@@ -53,9 +44,9 @@ function funcFive() {
     alert(`inside the funcFive function ${a}`);
 }
 
-// // #3.1 - run in the console:
-// funcFour() //Creates a global property a on the window object and assigns "hello".
-// funcFive() //Hello - because a is global
+// #3.1 - run in the console:
+funcFour() //Creates a global property a on the window object and assigns "hello".
+funcFive() //Hello - because a is global
 
 //#4
 let a = 1;
@@ -70,7 +61,7 @@ funcSix()
 // #4.2 What will happen if the variable is declared 
 // with const instead of let ? Result: inside the funcSix function test - because - nothing will be changed becasue both variables are declared
 
-#5
+// #5
 let a = 2;
 if (true) {
     let a = 5;
