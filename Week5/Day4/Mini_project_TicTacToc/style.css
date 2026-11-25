@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(78, 150, 197);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Courier New", Courier, monospace;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+#result {
+    min-height: 28px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.box {
+    aspect-ratio: 1;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(40px, 15vw, 100px);
+    cursor: pointer;
+}
+
+#restart {
+    margin-top: 10px;
+}
