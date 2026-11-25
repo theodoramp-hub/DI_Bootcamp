@@ -8,7 +8,7 @@ myForm.addEventListener("submit", (e) => {
 
     console.log(person);
 
-    const myJSON =JSON.stringify(person)
+    const myJSON =JSON.stringify(person);
     console.log(myJSON)
 })
 
