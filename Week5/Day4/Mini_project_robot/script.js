@@ -71,24 +71,43 @@ const robots = [
           }
           ];
 
-const myDiv = document.getElementById("robotsCards")
-robots.forEach(robot => {
-  
-  const box = document.createElement("div");
-  box.classList.add("robotCard");
+function displayRobots (robotList) {
+
+  const myDiv = document.getElementById("robotsCards");
+  myDiv.replaceChildren();
+
+  robotList.forEach(robot => {
+    
+    const card = document.createElement("div");
+    card.classList.add("robotCard");
 
 
-  const myh2 = document.createElement("h2")
-  const myp = document.createElement("p")
-  const myimage = document.createElement("img")
+    const myh2 = document.createElement("h2")
+    const myp = document.createElement("p")
+    const myimage = document.createElement("img")
 
-  myh2.textContent = robot.name
-  myp.textContent = robot.email
-  myimage.src = robot.image
+    myh2.textContent = robot.name
+    myp.textContent = robot.email
+    myimage.src = robot.image
 
-  box.append(myimage,myh2, myp)
-  myDiv.append(box)
+    card.append(myimage,myh2, myp)
+    myDiv.append(card)
 
+  })
+}
+
+const mySearch = document.getElementById("search")
+mySearch.addEventListener ("input", (event) =>{
+  const input = event.target.value
+  console.log(input);
+
+  const matches = robots.filter(robot => {
+    return robot.name.toLowerCase().includes(input.toLowerCase())
+  })
+  console.log(matches);
+
+  displayRobots(matches);
 
 })
 
+displayRobots(robots);

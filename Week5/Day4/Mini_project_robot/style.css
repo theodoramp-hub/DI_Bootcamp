@@ -1,0 +1,43 @@
+#robotsCards {
+    display: grid;
+    grid-template-columns:repeat(3,250px);
+    gap:20px;
+    justify-content:center;
+    margin-top: 30px;
+}
+
+.robotCard {
+    background:lightblue;
+    padding :15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.robotCard img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #303952;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px;
+    background-color: rgb(87, 158, 87);
+ }
+
+h1 {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+}
+
+#search {
+    width: 1000px;
+    padding: 10px;
+    font-size: 16px;
+
+}
+body {
+    background-color: rgb(116, 109, 196);
+    background-image: "C:\Users\tpetrou\Documents\DEVELOPERS INSTITUTE\DI_Bootcamp\Week5\Day6\card-pattern.png";
+}
